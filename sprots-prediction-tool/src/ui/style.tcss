@@ -1,3 +1,12 @@
+/* Custom color palette */
+$background: #1e1e2e; /* Dark background */
+$text: #cdd6f4;       /* Light text */
+$primary: #89b4fa;    /* Blue for buttons and headers */
+$primary-dark: #74a7ec; /* Darker blue for accents */
+$secondary: #f5c2e7;  /* Pink for accents */
+$panel: #191fc6; /* Darker panel background */
+$panel-light: #45475a; /* Lighter panel background */
+
 /* Base styles for the screen */
 Screen {
     align: center middle;
@@ -31,14 +40,11 @@ Container {
     border: round $primary;
     padding: 1;
     background: $panel;
-    layout: grid;
-    grid-size: 2 3; /* 2 columns, 3 rows */
-    grid-gutter: 1;
+    layout: vertical;
 }
 
 /* Title styling */
 #title {
-    column-span: 2; /* Span across both columns */
     text-align: center;
     text-style: bold;
     color: $secondary;
@@ -50,7 +56,6 @@ Container {
 
 /* Menu options styling */
 #menu {
-    column-span: 2; /* Span across both columns */
     layout: horizontal;
     align: center middle;
     margin: 1;
@@ -87,7 +92,6 @@ Input:focus {
 
 /* Output area styling */
 #output {
-    column-span: 2; /* Span across both columns */
     width: 100%;
     height: 100%;
     margin: 1;
@@ -98,35 +102,17 @@ Input:focus {
     overflow-y: auto;
 }
 
-/* Table styling */
-Table {
-    width: 100%;
-    height: 100%;
-    border: round $primary;
-    background: $panel-light;
+/* Table row styling */
+.table-row {
+    layout: horizontal;
+    align: center middle;
+    margin: 0;
+    padding: 0;
 }
 
-Table > Header {
-    background: $primary-dark;
-    color: $text;
-    text-style: bold;
+.table-cell {
+    width: 1fr;
+    padding: 1;
+    border: solid $primary;
 }
 
-Table > Row {
-    background: $panel;
-    color: $text;
-}
-
-Table > Row:hover {
-    background: $secondary;
-    color: $background;
-}
-
-/* Custom color palette */
-$background: #1e1e2e; /* Dark background */
-$text: #cdd6f4;       /* Light text */
-$primary: #89b4fa;    /* Blue for buttons and headers */
-$primary-dark: #74a7ec; /* Darker blue for accents */
-$secondary: #f5c2e7;  /* Pink for accents */
-$panel: #313244;      /* Darker panel background */
-$panel-light: #45475a; /* Lighter panel background */
