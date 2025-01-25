@@ -1,8 +1,10 @@
-rich
-pandas
-numpy
-scikit-learn
-sqlite3
-discord.py
+fastapi
+uvicorn
+supabase
+python-dotenv
 nba_api
-qrcode
+textual
+requests
+scikit-learn
+pandas
+joblib

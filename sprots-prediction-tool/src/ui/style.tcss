@@ -1,0 +1,132 @@
+/* Base styles for the screen */
+Screen {
+    align: center middle;
+    background: $background;
+    color: $text;
+}
+
+/* Header styling */
+Header {
+    background: $primary;
+    color: $text;
+    text-style: bold;
+    padding: 1;
+    border: double $secondary;
+}
+
+/* Footer styling */
+Footer {
+    background: $primary;
+    color: $text;
+    text-style: bold;
+    padding: 1;
+    border: double $secondary;
+}
+
+/* Container for the main content */
+Container {
+    width: 90%;
+    height: 90%;
+    align: center middle;
+    border: round $primary;
+    padding: 1;
+    background: $panel;
+    layout: grid;
+    grid-size: 2 3; /* 2 columns, 3 rows */
+    grid-gutter: 1;
+}
+
+/* Title styling */
+#title {
+    column-span: 2; /* Span across both columns */
+    text-align: center;
+    text-style: bold;
+    color: $secondary;
+    margin: 1;
+    border: double $primary;
+    padding: 1;
+    background: $primary-dark;
+}
+
+/* Menu options styling */
+#menu {
+    column-span: 2; /* Span across both columns */
+    layout: horizontal;
+    align: center middle;
+    margin: 1;
+}
+
+/* Button styling */
+Button {
+    width: 20;
+    margin: 1;
+    background: $primary;
+    color: $text;
+    text-style: bold;
+    border: round $secondary;
+}
+
+Button:hover {
+    background: $secondary;
+    color: $background;
+}
+
+/* Input field styling */
+Input {
+    width: 100%;
+    margin: 1;
+    border: round $primary;
+    padding: 1;
+    background: $panel-light;
+    color: $text;
+}
+
+Input:focus {
+    border: double $secondary;
+}
+
+/* Output area styling */
+#output {
+    column-span: 2; /* Span across both columns */
+    width: 100%;
+    height: 100%;
+    margin: 1;
+    border: round $primary;
+    padding: 1;
+    background: $panel-light;
+    color: $text;
+    overflow-y: auto;
+}
+
+/* Table styling */
+Table {
+    width: 100%;
+    height: 100%;
+    border: round $primary;
+    background: $panel-light;
+}
+
+Table > Header {
+    background: $primary-dark;
+    color: $text;
+    text-style: bold;
+}
+
+Table > Row {
+    background: $panel;
+    color: $text;
+}
+
+Table > Row:hover {
+    background: $secondary;
+    color: $background;
+}
+
+/* Custom color palette */
+$background: #1e1e2e; /* Dark background */
+$text: #cdd6f4;       /* Light text */
+$primary: #89b4fa;    /* Blue for buttons and headers */
+$primary-dark: #74a7ec; /* Darker blue for accents */
+$secondary: #f5c2e7;  /* Pink for accents */
+$panel: #313244;      /* Darker panel background */
+$panel-light: #45475a; /* Lighter panel background */
